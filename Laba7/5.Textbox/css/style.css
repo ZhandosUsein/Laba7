@@ -1,0 +1,10 @@
+.table th{
+	color:blue;
+	font-weight: bold;
+	background-color:cyan;
+	padding:7px 5px; 
+}
+
+.table tr.even{
+	background-color : yellow;
+}

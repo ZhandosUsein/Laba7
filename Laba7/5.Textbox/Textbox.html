@@ -1,0 +1,31 @@
+﻿<!Doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+	<title>Remainings!</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<form>
+<textarea id="txt" maxlength="20"></textarea>​ <span id="remaining">20</span>
+"arip jazuga boladi"
+</form>
+<script>
+var maxchar = 20;
+var i = document.getElementById("txt");
+var c = document.getElementById("remaining");
+c.innerHTML = maxchar;
+    
+i.addEventListener("keyup",count);
+
+function count(e){
+    var len =  i.value.length;
+    if (len >= maxchar){
+       e.preventDefault();
+    } else{
+       c.innerHTML = maxchar - len-1;   
+    }
+}
+
+</script>​
+</html>

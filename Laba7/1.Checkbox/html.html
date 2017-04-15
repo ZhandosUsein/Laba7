@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkbox batirmani oshiru</title>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+	<p>
+		<input type="checkbox" name ="terms" id="terms">
+		<label for="terms">Kelisemin</label>
+	</p>
+	<p>
+		<input name="send" type="submit" id="send" value="submit">
+
+	</p>
+</form>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js">
+</script>
+<script>
+$(function() {
+	var button = $('#send');
+	button.attr('disabled','disabled');
+	$('#terms').change(function(e) {
+		if (this.checked) {
+			button.removeAttr('disabled');
+		} else {
+			button.attr('disabled','disabled');
+		}
+	});
+});
+</script>
+</body>
+</html>
